@@ -1,8 +1,8 @@
-
+ 
 import java.util.Scanner;
-
+ 
 public class CheckYourIndentation {
-
+ 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
@@ -17,6 +17,6 @@ public class CheckYourIndentation {
         }else {
             System.out.println("The second was larger than the first!");
         }
-
+ 
     }
 }

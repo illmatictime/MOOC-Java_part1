@@ -1,11 +1,11 @@
-
+ 
 import java.util.Scanner;
-
+ 
 public class DifferentTypesOfInput {
-
+ 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
+ 
         // Write your program here
         System.out.println("Give a string:");
         String inputString = scan.nextLine();
@@ -24,6 +24,6 @@ public class DifferentTypesOfInput {
         System.out.println("You gave the double "+inputDouble);
         System.out.println("You gave the boolean "+inputBoolean);
         
-
+ 
     }
 }

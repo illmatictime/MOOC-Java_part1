@@ -1,11 +1,11 @@
-
+ 
 import java.util.Scanner;
-
+ 
 public class AverageOfThreeNumbers {
-
+ 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+ 
         // Write your program here      
         System.out.println("Give the first number:");
         int firstNum = Integer.valueOf(scanner.nextLine());
@@ -17,3 +17,4 @@ public class AverageOfThreeNumbers {
         System.out.println("The average is " + result);
     }
 }
+ 

@@ -1,11 +1,11 @@
-
+ 
 import java.util.Scanner;
-
+ 
 public class LeapYear {
-
+ 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
+ 
         int year = Integer.valueOf(scan.nextLine());
         
         if(year % 400 == 0){

@@ -1,8 +1,8 @@
-
+ 
 import java.util.Scanner;
-
+ 
 public class OddOrEven {
-
+ 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
@@ -30,3 +30,4 @@ public class OddOrEven {
         // So, by taking the modulo of a number and two you can find out if it is even or odd !
     }
 }
+ 
