@@ -13,19 +13,20 @@ public class AdvancedAstrology {
         // part 1 of the exercise
         for(int i = 0; i < number; i++){
             System.out.print(" ");
-        }
+        } 
+        //number = 4
+        //i=0 " "
+        //i=1 "  "
+        //i=2 "   "
+        //i=3 "    "
     }
 
     public static void printTriangle(int size) {
         // part 2 of the exercise
-        for(int j = 0; j<size; j++){
-            printSpaces(size);
-            for(int i = size-j; i <= size; i++){
-                //printSpaces(size);
-                printStars(size);
-            } 
-        }
-        
+        for(int i=1; i<=size; i++){
+            printSpaces(size-i);
+            printStars(i);
+         }        
     }
 
     public static void christmasTree(int height) {
