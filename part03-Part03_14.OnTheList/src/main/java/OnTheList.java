@@ -16,6 +16,12 @@ public class OnTheList {
 
             list.add(input);
         }
-
+        System.out.println("Search for? ");
+        String findWord = scanner.nextLine();
+        if(list.contains(findWord)){
+            System.out.println(findWord + " was found!");
+        }else{
+            System.out.println(findWord + " was not found!");
+        }     
     }
 }
