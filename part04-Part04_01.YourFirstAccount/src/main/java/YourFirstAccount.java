@@ -8,6 +8,6 @@ public class YourFirstAccount {
         
         firstAccount.deposit(20.0);
         
-        System.out.println("The balance on my first Account is now: " + firstAccount);
+        System.out.println(firstAccount);
     }
 }
