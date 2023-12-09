@@ -31,4 +31,21 @@ public class Person {
     public int returnAge(){
         return this.age;
     }
+    
+    public boolean isOfLegalAge(){
+        if(this.age < 18){
+            return false;
+        }
+        return true;
+    }
+    
+    /*
+    public boolean isOfLegalAge(){
+        return this.age >= 18;
+    }
+    */
+    
+    public String getName(){
+        return this.name;
+    }
 }

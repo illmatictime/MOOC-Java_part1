@@ -3,19 +3,29 @@ import java.util.Scanner;
 public class Sandbox {
  
     public static void main(String[] args) {
-        Person pekka = new Person("Pekka");
-        Person antti = new Person("Antti");
+    Person pekka = new Person("Pekka");
+    Person antti = new Person("Antti");
 
+    int i = 0;
+    while (i < 30) {
         pekka.growOlder();
-        pekka.growOlder();
+        i = i + 1;
+    }
 
-        antti.growOlder();
+    antti.growOlder();
 
-        System.out.println("Pekka's age: " + pekka.returnAge());
-        System.out.println("Antti's age: " + antti.returnAge());
-        int combined = pekka.returnAge() + antti.returnAge();
+    System.out.println("");
 
-        System.out.println("Pekka's and Antti's combined age " + combined + " years");
+    if (antti.isOfLegalAge()) {
+        System.out.println(antti.getName() + " is of legal age");
+    } else {
+        System.out.println(antti.getName() + " is underage");
+    }
+
+    if (pekka.isOfLegalAge()) {
+        System.out.println(pekka.getName() + " is of legal age");
+    } else {
+        System.out.println(pekka.getName() + " is underage ");
     }
 }
- 
+}
