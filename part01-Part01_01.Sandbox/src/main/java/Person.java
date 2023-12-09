@@ -23,6 +23,12 @@ public class Person {
 
     // growOlder() method has been added
     public void growOlder() {
-        this.age = this.age + 1;
+        if (this.age < 30) {
+            this.age = this.age + 1;
+        }
+    }
+    
+    public int returnAge(){
+        return this.age;
     }
 }

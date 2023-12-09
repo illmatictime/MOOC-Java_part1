@@ -3,18 +3,19 @@ import java.util.Scanner;
 public class Sandbox {
  
     public static void main(String[] args) {
-        Person ada = new Person("Ada");
+        Person pekka = new Person("Pekka");
         Person antti = new Person("Antti");
 
-        ada.printPerson();
-        antti.printPerson();
-        System.out.println("");
+        pekka.growOlder();
+        pekka.growOlder();
 
-        ada.growOlder();
-        ada.growOlder();
+        antti.growOlder();
 
-        ada.printPerson();
-        antti.printPerson();
+        System.out.println("Pekka's age: " + pekka.returnAge());
+        System.out.println("Antti's age: " + antti.returnAge());
+        int combined = pekka.returnAge() + antti.returnAge();
+
+        System.out.println("Pekka's and Antti's combined age " + combined + " years");
     }
 }
  
