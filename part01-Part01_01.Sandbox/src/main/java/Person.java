@@ -17,9 +17,10 @@ public class Person {
         this.name = initialName;
     }
 
+    /*    use toString()
     public void printPerson() {
-        System.out.println(this.name + ", age " + this.age + " years");
-    }
+    System.out.println(this.name + ", age " + this.age + " years");
+    }*/
 
     // growOlder() method has been added
     public void growOlder() {
@@ -47,5 +48,9 @@ public class Person {
     
     public String getName(){
         return this.name;
+    }
+    
+    public String toString(){
+        return this.name + ", age " + this.age + " years";
     }
 }
