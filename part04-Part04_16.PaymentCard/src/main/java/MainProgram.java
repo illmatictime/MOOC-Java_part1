@@ -6,6 +6,8 @@ public class MainProgram {
         
         // Here you can write code to test that PaymentCard works as intended
         // be sure to erase the extra code for the last part of the exercise!
-
+        
+        PaymentCard card = new PaymentCard(50);
+        System.out.println(card);
     }
 }
