@@ -27,6 +27,14 @@ public class PaymentCard {
         }
     }
     
+    public void addMoney(double amount){
+        if((this.balance + amount)>=150){
+            this.balance = 150;
+        }else{
+            this.balance += amount;
+        }
+    }
+    
     public String toString(){
         return "The card has a balance of " + this.balance + " euros"; 
     }
