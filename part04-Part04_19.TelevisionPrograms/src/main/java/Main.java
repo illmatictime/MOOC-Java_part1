@@ -22,6 +22,7 @@ public class Main {
             
             programs.add(new TelevisionProgram(name, duration));
         }
+        System.out.println("");
         System.out.println("Program's maximum duration?" );
         int maxDuration = Integer.valueOf(scanner.nextLine());
         
