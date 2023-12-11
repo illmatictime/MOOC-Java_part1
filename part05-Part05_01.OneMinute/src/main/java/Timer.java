@@ -10,22 +10,22 @@
  */
 public class Timer {
     private ClockHand seconds;
-    private ClockHand milliseconds;
+    private ClockHand hundredthsOfSeconds;
 
     public Timer(){
         this.seconds = new ClockHand(60);
-        this.milliseconds = new ClockHand(100);
+        this.hundredthsOfSeconds = new ClockHand(100);
     }
     
     public void advance(){
-        this.milliseconds.advance();
+        this.hundredthsOfSeconds.advance();
         
-        if(this.milliseconds.value() == 0){
+        if(this.hundredthsOfSeconds.value() == 0){
             this.seconds.advance();
         }
     }
     
     public String toString(){
-        return this.seconds + ":" + this.milliseconds;
+        return this.seconds + ":" + this.hundredthsOfSeconds;
     }
 }
