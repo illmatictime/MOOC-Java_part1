@@ -9,10 +9,10 @@
  * @author Yoda
  */
 public class Match {
-    private String firstTeam;
-    private String secondTeam;
-    private int firstTeamScore;
-    private int secondTeamScore;
+    private final String firstTeam;
+    private final String secondTeam;
+    private final int firstTeamScore;
+    private final int secondTeamScore;
     
     public Match(String firstTeam, String secondTeam, int firstTeamScore, int SecondTeamScore){
         this.firstTeam = firstTeam;
@@ -22,10 +22,7 @@ public class Match {
     }
     
     public boolean hasPlayed(String inputTeam){
-        if(this.firstTeam.equals(inputTeam) || this.secondTeam.equals(inputTeam)){
-            return true;
-        }
-        return false;
+        return this.firstTeam.equals(inputTeam) || this.secondTeam.equals(inputTeam);
     }
     
     public String getWinner(){

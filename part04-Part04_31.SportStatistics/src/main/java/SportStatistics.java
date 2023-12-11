@@ -18,7 +18,7 @@ public class SportStatistics {
         int gamesWon = 0;
         
         for(Match y: matches){
-            if(y.hasPlayed(teamName) == true){
+            if(y.hasPlayed(teamName)){
                 gamesPlayed = gamesPlayed + 1;
             }
             if(y.getWinner().equals(teamName)){
