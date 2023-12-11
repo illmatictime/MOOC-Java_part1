@@ -25,6 +25,7 @@ public class Timer {
         }
     }
     
+    @Override
     public String toString(){
         return this.seconds + ":" + this.hundredthsOfSeconds;
     }
