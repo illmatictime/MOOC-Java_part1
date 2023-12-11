@@ -14,15 +14,20 @@ public class SportStatistics {
         ArrayList<Match> matches = readMatchesFromFile(file);
         System.out.println("Team:");
         String teamName = scan.nextLine();
-        int count = 0;
+        int gamesPlayed = 0;
+        int gamesWon = 0;
         
-        for(Match team: matches){
-            if(team.toString().contains(teamName)){
-                count = count + 1;
-            }  
+        for(Match y: matches){
+            if(y.hasPlayed(teamName) == true){
+                gamesPlayed = gamesPlayed + 1;
+            }
+            if(y.getWinner().equals(teamName)){
+                gamesWon += 1;
+            }
         }
-        System.out.println("Games: " + count);
-        
+        System.out.println("Games: " + gamesPlayed);
+        System.out.println("Wins: " + gamesWon);
+        System.out.println("Losses: " + (gamesPlayed - gamesWon));
     }
     
     public static ArrayList<Match> readMatchesFromFile(String file){

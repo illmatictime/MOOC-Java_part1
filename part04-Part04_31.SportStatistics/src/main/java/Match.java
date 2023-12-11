@@ -21,10 +21,20 @@ public class Match {
         this.secondTeamScore = SecondTeamScore;
     }
     
-//    public aMatch(){
-//        
-//    }
-//    
+    public boolean hasPlayed(String inputTeam){
+        if(this.firstTeam.equals(inputTeam) || this.secondTeam.equals(inputTeam)){
+            return true;
+        }
+        return false;
+    }
+    
+    public String getWinner(){
+        if(this.firstTeamScore>secondTeamScore){
+            return this.firstTeam;
+        }
+        return this.secondTeam;
+    }
+   
     public String getFirstTeamName(){
         return this.firstTeam;
     }
