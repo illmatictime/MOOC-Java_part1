@@ -11,22 +11,14 @@
 public class Fitbyte {
     private int age;
     private int restingHeartRate;
-    private double percentageOfMaximum;
-    private double maxHeartRate;
     
     public Fitbyte(int age, int restingHeartRate){
         this.age = age;
         this.restingHeartRate = restingHeartRate;
-        this.percentageOfMaximum = percentageOfMaximum;
-        this.maxHeartRate = (206.3 - (0.711 * this.age));
     }
     
     public double targetHeartRate(double percentageOfMaximum){
-        return (this.maxHeartRate - this.restingHeartRate)*(this.percentageOfMaximum)+this.restingHeartRate;
-    }
-    
-    @Override
-    public String toString(){
-        return "Target " + this.percentageOfMaximum + " of maximum: " + targetHeartRate(this.percentageOfMaximum);
+        double maxHeartRate = (206.3 - (0.711 * this.age));
+        return (maxHeartRate - this.restingHeartRate)*(percentageOfMaximum)+this.restingHeartRate;
     }
 }
