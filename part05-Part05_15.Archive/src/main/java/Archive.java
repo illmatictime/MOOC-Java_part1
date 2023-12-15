@@ -26,7 +26,24 @@ public class Archive {
     }
 
     @Override
+    public boolean equals(Object compared){
+        if (this == compared){
+            return true;
+        }
+
+        if(!(compared instanceof Archive)){
+            return false;
+        }
+
+        Archive comparedBook = (Archive) compared;
+        if(this.identifier.equals(comparedBook.identifier)){
+            return true;
+        }
+
+        return false;
+    }
+
     public String toString(){
-        return this.getIdentifier() + ": " + this.getName();
+        return this.identifier + ": " + this.name;
     }
 }
