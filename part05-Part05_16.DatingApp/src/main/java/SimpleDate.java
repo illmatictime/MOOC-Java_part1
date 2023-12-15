@@ -33,4 +33,16 @@ public class SimpleDate {
         return false;
     }
 
+    public void advance(){
+        if(this.day == 30 && this.month == 12){
+            this.day = 1;
+            this.month = 1;
+            this.year = this.year + 1;
+        }else if(this.day == 30){
+            this.day = 1;
+            this.month = this.month + 1;
+        }else{
+            this.day += 1;
+        }
+    }
 }
