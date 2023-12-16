@@ -54,16 +54,30 @@ public class Money {
         
         int euros = this.euros-decreaser.euros;
         int cents = this.cents-decreaser.cents;
-        if(cents < 0 && euros>1){
-            Money newMoney = new Money(this.euros-decreaser.euros -1 , decreaser.cents-this.cents);
+        
+        if(cents < 0){
+            cents = cents + 100;
+            euros = euros -1;
+            Money newMoney = new Money(euros , cents);
             return newMoney;
-        }else if(cents < 0 && euros < 0 || euros < 0){
-            Money newMoney = new Money(0, 0);
+        }else if(cents < 0 && euros>1){
+            Money newMoney = new Money(euros, cents);
             return newMoney;
         }else if(euros < 0){
             Money newMoney = new Money(0, 0);
             return newMoney;
         }
+        
+//        if(cents < 0 && euros>1){
+//            Money newMoney = new Money(euros, cents);
+//            return newMoney;
+//        }else if(cents < 0 && euros < 0 || euros < 0){
+//            Money newMoney = new Money(0, 0);
+//            return newMoney;
+//        }else if(euros < 0){
+//            Money newMoney = new Money(0, 0);
+//            return newMoney;
+//        }
         Money newMoneyClone = new Money(this.euros-decreaser.euros, this.cents-decreaser.cents);
         return newMoneyClone;
     }
