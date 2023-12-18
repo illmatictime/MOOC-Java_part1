@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import jdk.internal.joptsimple.internal.Strings;
 
 public class SimpleCollection {
 
@@ -22,17 +21,29 @@ public class SimpleCollection {
     
     public String toString(){
         String names = "";
-
-        for (String element: elements) {
-            names = names + element + "\n";
+//
+//        for (String element: elements) {
+//            names = names + element + "\n";
+//        }
+//        for (String element: elements) {
+//            names += "\n" + element;
+//        }
+        int i = 0;
+        for(String element: this.elements){
+            if(i < this.elements.size()-1){
+                names += element + "\n";
+            }else{
+                names += element;
+            }
+            i++;
         }
 
-        if(elements.isEmpty()){
+        if(this.elements.isEmpty()){
             return "The collection " + name + " is empty.";
-        }else if(elements.size() == 1){
+        }else if(this.elements.size() == 1){
             return "The collection " + name + " has 1 element:\n" + names;
         }else{
-            return "The collection " + name + " has " + elements.size() + " elements:\n" + names;
+            return "The collection " + name + " has " + this.elements.size() + " elements:\n" + names;
         }
     }
 }
