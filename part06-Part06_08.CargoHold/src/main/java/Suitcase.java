@@ -55,4 +55,17 @@ public class Suitcase {
         return this.items.size() + " items (" + totalWeight + " kg)";
     }
   
+    public void printItems(){
+        for(Item value:this.items){
+            System.out.println(value);
+        }
+    }
+    
+    public int totalWeight(){
+        int totalWeight = 0;
+        for(Item value:this.items){
+            totalWeight += value.getWeight();
+        }
+        return totalWeight;
+    }
 }
