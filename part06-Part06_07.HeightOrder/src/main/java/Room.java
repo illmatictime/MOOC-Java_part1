@@ -31,11 +31,30 @@ public class Room {
         return this.persons;
     }
     
-    public Person shorter(){
+    public Person shortest(){
         if(isEmpty()){
             return null;
         }
         
+        Person shortest = this.persons.get(0);
+        for(Person height:this.persons){
+            if(shortest.getHeight() > height.getHeight()){
+                shortest = height;
+            }
+        }
         
+        return shortest;
+    }
+    
+    public Person take(){
+        if(isEmpty()){
+            return null;
+        }
+
+        Person take = shortest();
+        
+        this.persons.remove(shortest());
+                
+        return take;
     }
 }
