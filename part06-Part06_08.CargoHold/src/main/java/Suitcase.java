@@ -38,21 +38,6 @@ public class Suitcase {
         }
     }
     
-    public String toString(){
-        //ArrayList<Item> items = new ArrayList<>();
-        int totalWeight = 0;
-        for(int i = 0; i < items.size(); i++){
-            totalWeight += items.get(i).getWeight();
-        }
-        
-        if(items.size() == 0){
-            return "no items (" + totalWeight + " kg)";
-        }else if(items.size() == 1){
-            return this.items.size() + " item (" + totalWeight + " kg)";
-        }
-        return this.items.size() + " items (" + totalWeight + " kg)";
-    }
-  
     public void printItems(){
         for(Item value:this.items){
             System.out.println(value);
@@ -82,5 +67,19 @@ public class Suitcase {
         return theHeaviestItem;
     }
     
-    
+    @Override
+    public String toString(){
+        //ArrayList<Item> items = new ArrayList<>();
+        int totalWeight = 0;
+        for(int i = 0; i < items.size(); i++){
+            totalWeight += items.get(i).getWeight();
+        }
+        
+        if(items.size() == 0){
+            return "no items (" + totalWeight + " kg)";
+        }else if(items.size() == 1){
+            return this.items.size() + " item (" + totalWeight + " kg)";
+        }
+        return this.items.size() + " items (" + totalWeight + " kg)";
+    }
 }
