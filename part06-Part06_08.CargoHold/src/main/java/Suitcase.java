@@ -36,8 +36,6 @@ public class Suitcase {
         if(this.maxWeight >= totalWeight){
             this.items.add(item);
         }
-        
-
     }
     
     public String toString(){
@@ -68,4 +66,21 @@ public class Suitcase {
         }
         return totalWeight;
     }
+    
+    public Item heaviestItem(){
+        if(this.items.isEmpty()){
+            return null;
+        }
+        
+        Item theHeaviestItem = this.items.get(0);
+        for(Item weights:this.items){
+            if(weights.getWeight()>theHeaviestItem.getWeight()){
+                theHeaviestItem = weights;
+            }
+        }
+
+        return theHeaviestItem;
+    }
+    
+    
 }
