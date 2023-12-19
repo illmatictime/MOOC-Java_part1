@@ -21,9 +21,25 @@ public class Hold {
     }
     
     public void addSuitcase(Suitcase suitcase){
-        this.suitcases.add(suitcase);
+        int totalWeight = suitcase.totalWeight();
+        for(Suitcase weight:this.suitcases){
+            totalWeight += weight.totalWeight();
+        }
+        
+        if(this.maxWeight >= totalWeight){
+            this.suitcases.add(suitcase);
+        }
+        
     }
     
+    public void printItems(){
+        
+        for(Suitcase items:this.suitcases){
+            items.printItems();
+        }
+    }
+    
+    @Override
     public String toString(){
         int totalWeight = 0;
         
