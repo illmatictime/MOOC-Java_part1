@@ -19,23 +19,25 @@ public class JokeManager {
     }
     
     public void addJoke(String joke){
-        
         this.jokes.add(joke);
     }
     
     public String drawJoke(){
         System.out.println("Drawing a joke.");
-        if (jokes.isEmpty()){
-            return "Jokes are in short supply.";
+        Random random = new Random();
+        if(jokes.isEmpty()){
+            System.out.println("Jokes is empty");
+            
         }
-        Random draw = new Random();
-        int index = draw.nextInt(jokes.size());
-        return jokes.get(index);            
+        int index = random.nextInt(jokes.size());
+        String joke = jokes.get(index);
+        return joke;           
         
     }
     
     public void printJokes(){
         System.out.println("Printing the jokes.");
+        System.out.println(jokes);
         for(String theJokes: jokes){
             System.out.println(theJokes);
         }
