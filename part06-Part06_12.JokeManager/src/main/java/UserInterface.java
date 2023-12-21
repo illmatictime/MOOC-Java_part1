@@ -18,8 +18,8 @@ public class UserInterface {
     private Scanner scanner;
 
     public UserInterface(JokeManager jokes, Scanner scanner){
-        this.jokes = new JokeManager();
-        this.scanner = new Scanner(System.in);
+        this.jokes = jokes;
+        this.scanner = scanner;
     }
 
     public void start(){
@@ -47,6 +47,7 @@ public class UserInterface {
                 //jokes.drawJoke();
                 System.out.println(jokes.drawJoke());
             }else if(command.equals("3")){
+                System.out.println("Printing the jokes.");
                 jokes.printJokes();
             }
 
