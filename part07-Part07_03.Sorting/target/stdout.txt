@@ -38,12 +38,132 @@ for loop: 4
 9
 for loop: 3
 for loop: 5
-for loop: -19
-smallest: -19
+for loop: 6
 for loop: 2
+smallest: 2
+for loop: 7
+for loop: 1
+smallest: 1
+for loop: 3
+for loop: -13
+smallest: -13
+for loop: 5
+-13
+for loop: 2
+for loop: 1
+for loop: 3
+for loop: 0
+for loop: 2
+for loop: 1
+for loop: 3
+for loop: 0
+for loop: 2
+for loop: 1
+for loop: 3
+for loop: 6
+for loop: 3
+for loop: 0
+for loop: -1
+for loop: 4
+for loop: 3
+for loop: -5
+for loop: -19
+for loop: 1
 for loop: 7
 for loop: 1
 for loop: 3
 for loop: 7
 for loop: 5
--19
+smallest in 3: 1
+smallest in 3: 1
+for loop: 1
+for loop: 3
+for loop: 0
+smallest in 3: 2
+smallest in 3: 0
+for loop: 2
+for loop: 1
+for loop: 3
+for loop: 0
+smallest in 3: 3
+smallest in 3: 2
+for loop: 3
+for loop: 0
+smallest in 3: -1
+smallest in 3: 0
+for loop: -1
+for loop: 3
+for loop: 1
+for loop: 2
+smallest in 3: 3
+smallest in 3: 1
+for loop: 3
+for loop: 1
+for loop: 2
+smallest in 3: 1
+smallest in 3: 2
+for loop: 1
+for loop: 2
+smallest in 3: 2
+smallest in 3: 3
+for loop: 2
+smallest in 3: -1
+smallest in 3: 0
+for loop: -1
+for loop: 3
+for loop: 1
+for loop: 7
+for loop: 4
+for loop: 5
+for loop: 2
+for loop: 4
+for loop: 3
+smallest in 3: 3
+smallest in 3: 1
+for loop: 3
+for loop: 1
+for loop: 7
+for loop: 4
+for loop: 5
+for loop: 2
+for loop: 4
+for loop: 3
+smallest in 3: 1
+smallest in 3: 2
+for loop: 1
+for loop: 7
+for loop: 4
+for loop: 5
+for loop: 2
+for loop: 4
+for loop: 3
+smallest in 3: 7
+smallest in 3: 3
+for loop: 7
+for loop: 4
+for loop: 5
+for loop: 2
+for loop: 4
+for loop: 3
+smallest in 3: 4
+smallest in 3: 4
+for loop: 4
+for loop: 5
+for loop: 2
+for loop: 4
+for loop: 3
+smallest in 3: 5
+smallest in 3: 5
+for loop: 5
+for loop: 2
+for loop: 4
+for loop: 3
+smallest in 3: 2
+smallest in 3: 6
+for loop: 2
+for loop: 4
+for loop: 3
+smallest in 3: 4
+smallest in 3: 7
+for loop: 4
+for loop: 3
