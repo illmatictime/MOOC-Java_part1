@@ -8,6 +8,7 @@ public class MainProgram {
         System.out.println("Smallest: " + MainProgram.smallest(array));
         System.out.println("Index of the smallest number: " + MainProgram.indexOfSmallest(array));
         System.out.println(MainProgram.indexOfSmallestFrom(array, 2));
+        System.out.println(MainProgram.swap(array, 2, 3));
     }
 
     
@@ -60,7 +61,18 @@ public class MainProgram {
     }
 
     public static void swap(int[] array, int index1, int index2){
-        
+        int smallest = table[startIndex];
+        System.out.println("smallest in 3: " + smallest);
+        int indexOfSmallest = startIndex;
+        System.out.println("smallest in 3: " + indexOfSmallest);
+
+        for (int i = indexOfSmallest; i < table.length; i++) {
+            System.out.println("for loop: " + table[i]);
+            if(table[i] < smallest){
+                smallest = table[i];
+                indexOfSmallest = i;
+            }
+        }
     }
 
 }
