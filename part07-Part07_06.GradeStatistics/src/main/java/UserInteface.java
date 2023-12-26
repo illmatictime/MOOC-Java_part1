@@ -46,5 +46,23 @@ public class UserInteface {
         }
 
         System.out.println("Pass percentage: " + grade.passPercentage());
+        
+        System.out.println("Grade distribution:");
+        int counter = 5;
+        while (counter >= 0) {
+            int star = grade.numberOfGrade(counter);
+            System.out.print(counter + ": ");
+            printStars(star);
+            System.out.println("");
+ 
+            counter = counter - 1;
+        }
+    }
+
+    public static void printStars(int stars){
+        while (stars > 0){
+            System.out.print("*");
+            stars--;
+        }
     }
 }

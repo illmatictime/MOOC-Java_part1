@@ -12,6 +12,7 @@ public class Grades {
 
     public void addPoints(int point) {
         this.points.add(point);
+        this.grades.add(pointsToGrade(point));
     }
 
     public int averageOfPoints() {
@@ -51,5 +52,35 @@ public class Grades {
             }
         }
         return count * 100 / points.size();
+    }
+
+    public static int pointsToGrade(int points) {
+ 
+        int grade = 0;
+        if (points < 50) {
+            grade = 0;
+        } else if (points < 60) {
+            grade = 1;
+        } else if (points < 70) {
+            grade = 2;
+        } else if (points < 80) {
+            grade = 3;
+        } else if (points < 90) {
+            grade = 4;
+        } else {
+            grade = 5;
+        }
+ 
+        return grade;
+    }
+
+    public int numberOfGrade(int grade){
+        int count = 0;
+        for (Integer integer : grades) {
+            if(integer == grade){
+                count++;
+            }
+        }
+        return count;
     }
 }
