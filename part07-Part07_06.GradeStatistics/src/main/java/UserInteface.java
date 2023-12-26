@@ -44,5 +44,7 @@ public class UserInteface {
             System.out.println("Point average (passing): " +
                     1.0 * grade.averagePointsOfPass());
         }
+
+        System.out.println("Pass percentage: " + grade.passPercentage());
     }
 }

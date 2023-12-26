@@ -42,4 +42,14 @@ public class Grades {
 
         return pointsTotal / count;
     }
+
+    public double passPercentage(){
+        double count = 0;
+        for(Integer integer : points){
+            if(integer >= 50){
+                count++;
+            }
+        }
+        return count * 100 / points.size();
+    }
 }
