@@ -5,11 +5,11 @@ public class Recipes {
     private ArrayList<String> recipes;
 
     public Recipes(ArrayList<String> recipe){
-        this.recipes = recipe;
+        this.recipes = new ArrayList<>();
     }
 
-    public void add(String recipe){
-        this.recipes.add(recipe);
+    public void addList(ArrayList<String> recipe){
+        this.add(recipe);
     }
 
 }

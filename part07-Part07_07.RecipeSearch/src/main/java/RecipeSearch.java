@@ -16,11 +16,21 @@ public class RecipeSearch {
 
        // Recipes ingredients = new Recipes();
         
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<Recipes> list = new ArrayList<>();
+
+        Recipes recipes = new Recipes();
 
         try (Scanner fileReader = new Scanner(Paths.get(file))){
             while(fileReader.hasNextLine()){
-                list.add(fileReader.nextLine());
+                if(!(fileReader.hasNext())){
+                    //list.add(fileReader.nextLine());
+                    System.out.println("found the empty line");
+                    break;
+                }else{
+                    list.add(fileReader.nextLine());
+                }
+                // list.add(fileReader.nextLine());
+                recipes.add(list);
             }
         } catch (Exception e) {
             System.out.println("File does not exist: " + e.getMessage());
@@ -30,3 +40,8 @@ public class RecipeSearch {
     }
 
 }
+// if(fileReader.equals(null)){
+//                     System.out.println("Nice try");
+//                 }else{
+//                     recipes.add(fileReader);
+//                 }
