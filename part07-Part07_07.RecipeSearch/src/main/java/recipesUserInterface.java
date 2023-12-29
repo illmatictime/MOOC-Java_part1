@@ -12,9 +12,9 @@ public class recipesUserInterface {
         this.recipes = new ArrayList<>();
     }
 
-    public void start(String fileName){
+    public void startAndCommands(String fileName){
         readRecipes(fileName);
-        System.out.println(recipes);
+        //System.out.println(recipes);
     }
 
     public void readRecipes(String fileName){
@@ -42,5 +42,31 @@ public class recipesUserInterface {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
+    }
+
+    public boolean userCommand(String userCommand){
+        if(userCommand.equals("stop")){
+            return false;
+        }else if(userCommand.equals("list")){
+            printRecipes();
+            return true;
+        }
+        return true;
+    }
+
+    public void printRecipes(){
+        System.out.println("");
+        System.out.println("Recipes:");
+        for(Recipes recipe: recipes){
+            System.out.println(recipe);
+        }
+    }
+
+    public void printCommands(){
+        System.out.println("");
+        System.out.println("Commands:");
+        System.out.println("list - list the recipes");
+        System.out.println("stop - stops the program");
+        System.out.print("\nEnter command: ");
     }
 }
