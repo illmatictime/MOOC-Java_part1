@@ -2,14 +2,34 @@ import java.util.ArrayList;
 
 public class Recipes {
     
-    private ArrayList<String> recipes;
+    private ArrayList<String> ingredients;
+    private String recipeName;
+    private int cookingTime;
 
-    public Recipes(ArrayList<String> recipe){
-        this.recipes = new ArrayList<>();
+    public Recipes(String recipeName, int cookingTime){
+        this.recipeName = recipeName;
+        this.cookingTime = cookingTime;
+        this.ingredients = new ArrayList<>();
     }
 
-    public void addList(ArrayList<String> recipe){
-        this.add(recipe);
+    public String getRecipeName(){
+        return this.recipeName;
     }
 
+    public int getCookingTime(){
+        return this.cookingTime;
+    }
+
+    public ArrayList<String> getIngredients(){
+        return this.ingredients;
+    }
+
+    public void addIngredients(String ingredient){
+        this.ingredients.add(ingredient);
+    }
+
+    @Override
+    public String toString(){
+        return this.recipeName + ", cook time: " + this.cookingTime;
+    }
 }

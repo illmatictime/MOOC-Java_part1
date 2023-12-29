@@ -7,41 +7,28 @@ import java.util.Scanner;
 public class RecipeSearch {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            recipesUserInterface ui = new recipesUserInterface();
 
-        System.out.println("Name of the file:");
-
-        String file = scanner.nextLine();
-        
+            System.out.print("Name of the file: ");
+            String fileName = scanner.nextLine();
+            
+            ui.start(fileName);
+        }
 
        // Recipes ingredients = new Recipes();
         
-        ArrayList<Recipes> list = new ArrayList<>();
-
-        Recipes recipes = new Recipes();
-
-        try (Scanner fileReader = new Scanner(Paths.get(file))){
-            while(fileReader.hasNextLine()){
-                if(!(fileReader.hasNext())){
-                    //list.add(fileReader.nextLine());
-                    System.out.println("found the empty line");
-                    break;
-                }else{
-                    list.add(fileReader.nextLine());
-                }
-                // list.add(fileReader.nextLine());
-                recipes.add(list);
-            }
-        } catch (Exception e) {
-            System.out.println("File does not exist: " + e.getMessage());
-        }
-
-        System.out.println(list);
     }
 
 }
-// if(fileReader.equals(null)){
-//                     System.out.println("Nice try");
-//                 }else{
-//                     recipes.add(fileReader);
-//                 }
+
+    // public static void main(String[] args) {
+    //     Scanner scanner = new Scanner(System.in);
+
+    //     Grades grades = new Grades();
+
+    //     UserInteface ui = new UserInteface(grades, scanner);
+
+    //     ui.start();
+
+    // }
