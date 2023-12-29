@@ -9,19 +9,25 @@ public class RecipeSearch {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             recipesUserInterface ui = new recipesUserInterface();
-            
-            System.out.print("Name of the file: ");
+
+            System.out.print("File to read: ");
             String fileName = scanner.nextLine();
-            
+
             ui.startAndCommands(fileName);
-            
             ui.printCommands();
-            String userCommand = scanner.nextLine();
-            ui.userCommand(userCommand);
+
+            while (true) {
+                System.out.print("\nEnter command: ");
+                String userCommand = scanner.nextLine();
+                boolean isContinue = ui.userCommand(userCommand, scanner);
+                if (!isContinue) {
+                    break;
+                }
+            }
         }
 
-       // Recipes ingredients = new Recipes();
-        
+        // Recipes ingredients = new Recipes();
+
     }
 
 }
