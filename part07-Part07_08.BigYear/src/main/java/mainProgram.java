@@ -8,7 +8,13 @@ public class mainProgram {
         // if and when you create other classes, pass the scanner to them
         // as a parameter
 
-        Scanner scan = new Scanner(System.in);
+        try (Scanner scan = new Scanner(System.in)) {
+            BirdsUI ui = new BirdsUI();
+            System.out.print("?");
+            // add command menu
+            String command = scan.nextLine();
+
+        }
 
     }
 
