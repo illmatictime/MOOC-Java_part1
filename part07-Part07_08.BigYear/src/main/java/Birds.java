@@ -22,7 +22,7 @@ public class Birds {
         return this.observations;
     }
 
-    public void addIngredients() {
+    public void addObservation() {
         this.observations++;
     }
 

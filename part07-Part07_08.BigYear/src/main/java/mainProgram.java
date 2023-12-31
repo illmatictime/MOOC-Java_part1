@@ -7,12 +7,17 @@ public class mainProgram {
         // NB! Do not create other scanner objects than the one below
         // if and when you create other classes, pass the scanner to them
         // as a parameter
+        BirdsUI ui = new BirdsUI();
 
         try (Scanner scan = new Scanner(System.in)) {
-            BirdsUI ui = new BirdsUI();
-            System.out.print("?");
-            // add command menu
-            String command = scan.nextLine();
+            while (true) {
+                System.out.print("? ");
+                String userCommand = scan.nextLine();
+                boolean isContinue = ui.userCommand(userCommand, scan);
+                if (!isContinue) {
+                    break;
+                }
+            }
 
         }
 
